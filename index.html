@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ClonerNews</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Live update banner -->
+    <div class="live-banner" id="live-banner" hidden>
+      <span class="live-banner__dot"></span>
+      <span class="live-banner__text" id="live-banner-text"></span>
+      <button
+        class="live-banner__dismiss"
+        id="live-banner-dismiss"
+        aria-label="Dismiss"
+      >
+        ✕
+      </button>
+    </div>
+
+    <!-- Site header -->
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a href="#" class="site-header__logo" id="logo-link">
+          <span class="site-header__logo-bracket">[</span>ClonerNews<span
+            class="site-header__logo-bracket"
+            >]</span
+          >
+        </a>
+        <nav class="site-header__nav">
+          <button class="nav-btn nav-btn--active" data-type="story">
+            stories
+          </button>
+          <button class="nav-btn" data-type="job">jobs</button>
+          <button class="nav-btn" data-type="poll">polls</button>
+        </nav>
+        <div class="site-header__live">
+          <span class="live-indicator" id="live-indicator">
+            <span class="live-indicator__dot"></span>
+            live
+          </span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main content -->
+    <main class="main-layout">
+      <!-- Post list view -->
+      <section class="post-list-view" id="post-list-view">
+        <div class="post-list" id="post-list"></div>
+        <div class="load-more-sentinel" id="load-more-sentinel">
+          <div class="load-more-sentinel__spinner" id="load-spinner"></div>
+        </div>
+      </section>
+
+      <!-- Post detail view -->
+      <section class="post-detail-view" id="post-detail-view" hidden>
+        <button class="back-btn" id="back-btn">← back to list</button>
+        <article class="post-detail" id="post-detail-content"></article>
+        <section class="comment-section">
+          <h2
+            class="comment-section__heading"
+            id="comment-section-heading"
+          ></h2>
+          <div class="comment-list" id="comment-list"></div>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>
