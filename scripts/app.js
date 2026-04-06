@@ -129,7 +129,7 @@ async function loadNextPage() {
    When it enters the viewport (with 200px early margin), load more.
    ============================================================ */
 let lastScrollLoad = 0;
-const SCROLL_THROTTLE_MS = 2000;
+const SCROLL_THROTTLE_MS = 1000;
 
 const observer = new IntersectionObserver(
   (entries) => {
