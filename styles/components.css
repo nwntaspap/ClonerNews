@@ -110,6 +110,11 @@ body.banner-visible .site-header {
   top: var(--banner-height);
 }
 
+/* Push content down so banner doesn't overlap it */
+body.banner-visible .main-layout {
+  padding-top: calc(24px + var(--banner-height));
+}
+
 /* ============================================================
    NAV BUTTONS
    ============================================================ */
