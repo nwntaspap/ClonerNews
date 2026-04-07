@@ -13,7 +13,7 @@ A minimal Hacker News client built with **vanilla JavaScript**, focused on perfo
 - 🧠 In-memory caching (TTL-based)
 - 🧵 Post detail + comments view
 - 📊 Poll support (via Algolia API)
-- 🎨 Clean, responsive dark UI
+- 🎨 Clean, responsive UI with light & dark mode toggle
 
 ---
 
