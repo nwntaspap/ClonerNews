@@ -105,6 +105,46 @@
   flex-shrink: 0;
 }
 
+/* Theme Toggle styles */
+.theme-toggle {
+  position: relative;
+  width: 42px;
+  height: 22px;
+  display: inline-block;
+  margin-left: 12px;
+}
+
+.theme-toggle input {
+  display: none;
+}
+
+.theme-toggle__slider {
+  position: absolute;
+  inset: 0;
+  background: var(--bg-hover);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  background-color: var(--bg-hover);
+  transition: var(--transition);
+}
+
+.theme-toggle__slider::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 3px;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--text-primary);
+  transition: var(--transition);
+}
+
+.theme-toggle input:checked + .theme-toggle__slider::before {
+  transform: translate(18px, -50%);
+}
+
 /* Push header down when banner is visible */
 body.banner-visible .site-header {
   top: var(--banner-height);

@@ -30,6 +30,24 @@
   --transition: 150ms ease;
 }
 
+/* Light/Dark mode setup */
+[data-theme="light"] {
+  --bg-base: #ffffff;
+  --bg-surface: #f5f5f5;
+  --bg-raised: #eeeeee;
+  --bg-hover: #e4e4e4;
+  --border: #dcdcdc;
+  --border-bright: #cfcfcf;
+
+  --text-primary: #111111;
+  --text-secondary: #555555;
+  --text-dim: #888888;
+
+  --accent: #d48a00;
+  --accent-dim: #a66b00;
+  --accent-glow: rgba(212, 138, 0, 0.15);
+}
+
 /* ============================================================
    RESET
    ============================================================ */

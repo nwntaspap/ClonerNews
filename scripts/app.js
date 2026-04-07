@@ -25,6 +25,8 @@ const logoLink = document.getElementById("logo-link");
 const liveBanner = document.getElementById("live-banner");
 const liveBannerText = document.getElementById("live-banner-text");
 const liveBannerDismiss = document.getElementById("live-banner-dismiss");
+const toggleTheme = document.getElementById("dark-mode-toggle");
+const root = document.documentElement;
 
 /* ============================================================
    APP STATE
@@ -35,6 +37,14 @@ let isLoading = false;
 let hasMore = true;
 let lastMaxItemId = null; // baseline for the live ticker
 let lastScrollY = 0; // restored when going back to the list
+
+/* ============================================================
+   Light/Dark mode
+   ============================================================ */
+toggleTheme.addEventListener("change", () => {
+  const theme = toggleTheme.checked ? "light" : "dark";
+  root.setAttribute("data-theme", theme);
+});
 
 /* ============================================================
    NAVIGATION — switch between story / job / poll tabs
